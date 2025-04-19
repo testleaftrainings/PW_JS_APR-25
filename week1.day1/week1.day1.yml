@@ -1,0 +1,115 @@
+Week1.day1
+
+09:00 - 09:45 -> JavaScript Introduction 
+09:45 - 10:15 -> Primitive DataType
+10:15 - 10:40 -> ClassRoom(15mins)+Break(10mins)
+10:40 - 11:45 -> var  vs let vs const
+11:45 - 12:05 -> ClassRoom(15mins)+Break(5mins)
+12:05 - 12:45 -> Operators and Conditional statement
+12:45 - 01:00 -> ClassRoom(15mins)
+
+
+
+JS- 1995 - dev - within -10days Brendan Eich
+Mocha
+liveScript
+JavaScript
+
+Java and JavaScript - different
+
+
+
+
+
+Feature                           JavaScript
+Type	         	     Scripting language, mostly interpreted
+Platform	           Runs in web browsers (also Node.js for backend)
+Use Case	           Web interactivity, frontend development, backend (Node.js)
+Syntax	             Loosely typed, prototype-based
+Compilation	         Interpreted by browsers or runtime
+Concurrency          Uses event loop and callbacks (async/await)
+File Extension	                  .js
+Main Usage	        Interactive web pages, server-side JS
+
+1996 - ECMA(European Computer Manufacture Association)
+ECMA Script -> ES
+1997 -> ES1
+2015 -> ES6 ->
+
+1995 to 2014 -> var(dataType)
+ES6 -> let and const(dataType)
+
+
+
+
+
+
+
+
+
+
+The 7 Primitive Types:
+
+Number - Represents both integer and floating-point number
+let age = 25;
+let price = 99.99;
+
+String - Represents textual data
+let name = "Alice";
+let greeting = 'Hello';
+
+
+Boolean - Logical true/false values
+let isActive = true;
+let isComplete = false;
+
+Null - Represents intentional absence of any object value
+let emptyValue = null;
+
+Undefined - Represents a variable that has been declared but not assigned a value
+let x;
+console.log(x); // undefined
+
+BigInt (ES2020) - Represents integers larger than 2^53 - 1
+let bigNum = 9007199254740991n;
+
+Symbol (ES2015) - Represents unique identifiers
+let sym = Symbol('description');
+
+dataType variableName = value
+
+var count=67 -> Number
+var name="J" ->String or 'f'
+var taskCompleted=true -> Boolean
+var emptyData=null -> Null
+var d; -> Undefined
+var bigValue= 34567898763456789n
+
+
+
+
+
+
+
+
+
+var vs let vs const:
+
+Declaration & Basic Rules
+Feature         	var	               let	                   const
+Scope	       Function-scoped	      Block-scoped	           Block-scoped
+Hoisting	   Hoisted (undefined)	  Hoisted (TDZ*)	         Hoisted (TDZ*)
+Reassign	        ✅ Yes	            ✅ Yes	                   ❌ No
+Redeclare	   ✅ Yes (same scope)	   ❌ No (same scope)	    ❌ No (same scope)
+
+TDZ (Temporal Dead Zone): Cannot access before declaration (unlike var).
+
+
+Best Practices:
+Default to const (unless reassignment needed).
+Use let for variables that change.
+Avoid var (legacy code only).
+Declare at the top of the scope to avoid TDZ issues.
+
+
+
