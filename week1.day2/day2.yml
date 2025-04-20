@@ -1,0 +1,182 @@
+day2:
+Agenda:
+08:45 - 09:00 -> Recap
+09:00 - 09:30 -> Switch case
+09:30 - 10:15 -> Looping - for loop
+10:15 - 10:45 -> ClassRoom(15 mins)+break(15mins)
+10:45 - 11:35 -> String
+11:30 - 11:50 -> ClassRoom(15mins) 
+11:50 - 12:40 -> Arrays 
+12:40 - 01:00 -> ClassRoom(20mins)
+
+
+SwitchCase: 
+
+The switch statement is used to perform different actions based on different conditions,
+ as an alternative to multiple if...else if...else blocks.
+
+ if()
+{
+}else if(){
+
+}else if(){
+
+}else{
+}
+ Syntax:
+
+
+switch (expression) {
+  case value1:
+    // Code block
+    break;  // once condition satisfied end execution
+  case value2:
+    // Code block
+    break;
+  ...
+  default:
+    // Default code block
+}
+
+
+let mark =30
+
+switch(mark){
+
+case 80:
+console.log("First Mark")
+break;
+
+case 70:
+console.log("Second Mark")
+break;
+
+case 50:
+console.log("last mark")
+break;
+
+default:
+console.log("No mark updated")
+}
+
+
+
+
+
+
+
+
+
+Looping Statements:
+
+for Statement: The for loop in JavaScript is used to iterate over a range of values or to 
+repeat a block of code a certain number of times. It consists of three parts: 
+initialization, condition, and iteration expression. The loop continues as long as the condition is true.
+
+
+Initialization – Executed once before the loop starts.
+
+Condition – Checked before every iteration; loop runs as long as it's true.
+
+Update – Executed after each loop iteration.
+
+Example:
+
+for(initialization;condition;iteration){
+
+}
+i++ -> post increment => i+1
+++i -> pre increment
+
+let value=5
+
+for(let i=0;i<=value,i++){
+console.log(i)
+}
+
+//i=0;0<=5;       => i=1=> 0+
+//i=1;1<=5;i+1+> 1+1=2
+//i=2
+//i=3
+//i=4
+//i=5
+//i=6;6<=5 //stop process 
+output:
+0
+1
+2
+3
+4
+ 5               Jump Statements:
+
+break Statement: The break statement is used to exit a loop prematurely. When encountered inside a loop,
+ it immediately terminates the loop, and the control is transferred to the statement following the loop.
+
+ for (int i = 0; i < 10; i++) {
+  //0,1,2,3,4,5
+    if (i == 5) {
+        break; // Exits the loop when i is 5
+    }
+    // Code inside the loop
+}
+
+
+continue Statement: The continue statement is used to skip the rest of the code inside a loop for 
+the current iteration and move on to the next iteration.
+
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // Skips the rest of the code for i=5 and continues with the next iteration
+    }
+    // Code inside the loop
+}
+//0,1,2,3,4,6,7,8,9
+
+
+
+String:
+
+* its collection of Characters
+declare 2 types
+
+Type 1:
+String Literal
+let name="Dilip"
+val="Dilip"
+
+Type 2:
+String Object
+let comName= new String("Testleaf")
+let name1=new String("TestLeaf")
+
+Declaring a String:
+Single quotes '   '
+Double quotes "  "
+BackTicks  ` `
+
+let n1="Dilip @ 123"
+let n2='dilip'
+let n3=`dilip`
+
+Methods: 
+1.length -> find total number of characters
+index value -> start form 0
+console.log(n1.length) -> 5 ->0-4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
