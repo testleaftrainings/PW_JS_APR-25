@@ -1,0 +1,201 @@
+day1:
+Agenda:
+08:45 - 09:00 -> Recap
+09:00 - 10:45 -> Functions 
+10:45 - 11:05 -> Break
+11:05 - 11:35 -> String 
+11:35 - 11:55 -> Classroom 
+11:55 - 12:45 -> Array
+12:45 - 01:00 -> Classroom
+
+
+📘 Definition of Function:
+A function in JavaScript is a set of statements that performs a computation or action, packaged together 
+under a name. You can pass input values (parameters) to a function, and it may return a value as output.
+
+🧠 Why Use Functions?
+Avoid repetition of code
+Break complex problems into smaller, manageable parts
+Reusability
+Improves readability and maintainability
+
+🧪 Real-Life Analogy:
+🔧 Think of a function like a coffee machine:
+
+You give it input (coffee powder, water, sugar,Milk)
+It performs a task (brews the coffee) 
+It gives you an output (a cup of coffee)
+
+🧩 Types of Functions in JavaScript 
+1. Named Function (Function Declaration)
+2. Function Expression
+3. Arrow Function (ES6+)
+4. Callback Function
+
+1. Named Function (Function Declaration)
+A function with a specified name, defined using the function keyword.
+
+Syntax:
+function greet() {
+  console.log("Hello!")
+}
+greet() // Output: Hello!
+
+
+value()
+
+function value(){
+console.log("Name Function")
+}
+
+Key Points:
+Can be hoisted (accessible before declaration).
+Good for code readability and reuse.
+
+
+
+2. Function Expression
+A function assigned to a variable. It can be anonymous or named.
+
+Syntax:
+const greet = function() {
+  console.log("Hello!");
+};
+greet(); // Output: Hello!
+
+example: 
+
+let call=function(){
+console.log("this is Function Expression")
+
+}
+//call the varaiable name
+call()
+
+
+
+Key Points:
+Not hoisted (cannot be called before definition).
+Useful when functions need to be passed or returned.
+
+
+
+
+
+
+3. Arrow Function (ES6+)
+A concise syntax for writing function expressions, introduced in ES6.
+
+Syntax:
+const greet = () => {
+  console.log("Hello!");
+};
+greet(); // Output: Hello!
+
+Single-line version:
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5
+
+Key Points:
+Shorter syntax.
+Does not have its own this, arguments, or super.
+
+Arrow function syntax 
+() =>{
+}
+
+
+
+
+4. Callback Function
+A function passed as an argument to another function and called after some operation.
+
+Syntax:
+function process(callback) {
+  console.log("Processing...");
+  callback();
+}
+
+function done() {
+  console.log("Done!");
+}
+
+process(done);
+// Output:
+// Processing...
+// Done!
+Key Points:
+Used in asynchronous programming (like setTimeout, fetch).
+Promotes reusability and modular code.
+
+
+function launchBrowser(callLogin ,BrowserName){
+console.log("Launch Chrome Browser"+ BrowserName)
+console.log("Load the Url")
+callLogin() == login()
+}
+
+function login(){
+console.log("Enter the userName")
+console.log("Enter the passWord")
+console.log("Click on Login")
+}
+
+launchBrowser(login)
+
+
+//i need use call back function -args 
+
+..output
+Launch Chrome Browser
+Load the Url
+Enter the userName
+Enter the passWord
+Click on Login
+
+
+
+
+
+
+
+
+
+
+
+
+📘 What is a Promise in JavaScript?
+A Promise is a built-in JavaScript object that represents the eventual completion
+ or failure of an 
+asynchronous operation and its resulting value.
+
+It acts like a placeholder for a value that will be available in the future, allowing you to 
+write asynchronous code in a more organized, readable, and predictable manner.
+
+🧠 Why Promises Were Introduced
+Before Promises, JavaScript developers relied heavily on callback functions 
+to handle asynchronous tasks. 
+This led to problems like:
+
+Callback Hell (nested, unreadable code)
+Difficult error handling
+Lack of chaining capability for sequential tasks
+
+Promises solve these problems by giving us:
+A standardized syntax for async operations
+Cleaner chaining with .then() and .catch()
+Better error propagation
+
+🔄 How a Promise Works
+A Promise represents the status of an asynchronous operation.
+
+It has 3 states:
+
+State	             Description
+pending	  The operation is still in progress
+fulfilled	The operation completed successfully and returned a result
+rejected	The operation failed with an error
+Once a Promise is either fulfilled or rejected, it is considered settled — its state cannot change again.
+
+then() -> resolve
+catch() -> reject
