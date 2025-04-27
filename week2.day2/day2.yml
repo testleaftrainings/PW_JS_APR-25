@@ -1,0 +1,92 @@
+
+
+Playwright is an open-source automation testing tool developed by Microsoft. 
+ is primarily used for end-to-end testing of web applications and supports multiple 
+ browsers like Chromium, Firefox, and WebKit. Playwright can be used with popular 
+ programming languages such as JavaScript, TypeScript, Python, Java, and C#.
+
+🔹 Key Features of Playwright:
+Cross-Browser Testing: Supports Chromium, Firefox, and WebKit.
+
+Auto-waiting: Automatically waits for elements to be ready before performing actions.
+
+Multiple Language Support: Works with JavaScript, TypeScript, Python, Java, and .NET.
+
+Headless and Headful Modes: Can run in both modes based on the need.
+
+Supports Mobile Emulation: Useful for testing responsive web designs.
+
+Parallel Test Execution: Supports running multiple tests simultaneously.
+
+Built-in Test Runner: Comes with its own test runner (@playwright/test) when using JavaScript/TypeScript.
+
+Powerful Selectors: Uses CSS, XPath, text, and custom selectors for targeting elements.
+
+Network Interception: Can mock API calls, useful for testing without backend dependency.
+
+🔸 Usage of Playwright:
+✅ Common Use Cases:
+End-to-End Testing of modern web applications.
+
+Cross-browser Compatibility Testing.
+
+CI/CD Pipeline Integration for automated test execution.
+
+Visual Regression Testing (with third-party integrations).
+
+API Mocking and Testing during UI tests.
+
+Performance Testing (basic level, like checking page load times).
+
+🔹 Example (JavaScript/TypeScript):
+
+import { test, expect } from '@playwright/test';
+
+test('Login test', async ({ page }) => {
+  await page.goto('https://example.com/login');
+  await page.fill('#username', 'testuser');
+  await page.fill('#password', 'testpass');
+  await page.click('button[type="submit"]');
+  await expect(page).toHaveURL('https://example.com/dashboard');
+});
+
+
+
+
+
+ /* Run tests in files in parallel */
+  fullyParallel: false,
+  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  forbidOnly: !!process.env.CI,
+  /* Retry on CI only */
+  retries: process.env.CI ? 2 : 0,
+  /* Opt out of parallel tests on CI. */
+  workers: process.env.CI ? 1 : undefined,
+  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  reporter: [['html',{open:'always'}]],
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  use: {
+    /* Base URL to use in actions like `await page.goto('/')`. */
+    // baseURL: 'http://127.0.0.1:3000',
+
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    trace: 'on',
+    headless: false,
+    screenshot:'on',
+    video:'on' 
+  },
+
+  /* Configure projects for major browsers */
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] ,},
+    },
+
+
+
+
+
+
+
+
