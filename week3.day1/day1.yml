@@ -1,0 +1,145 @@
+Week3.day1
+08:45 - 09:00 -> Recap
+09:00 - 10:00 -> Understanding DOM and Basic Locators(css)(id,class,name)
+10:30 - 11:00 -> BreakOut(15mins)+Break(15mins)
+11:00 - 11:45 -> DropDown
+11:45 - 12:05 -> Classroom 
+12:05 - 01:00 -> Playwright locators/XPath
+
+
+DOM:Document Object Model
+<html> - tag name
+ <head> </head>
+ <body>
+ <div> -> divide into smaller part
+ <input>-> pass the value (text box)
+ <button> -> click action
+ <a> -> hyper link (link and text)
+<span>
+<img>
+
+ </body>
+ </html>
+
+Ways to Open DOM:
+1. right click on the application and click on inspect
+2. press f12 or fn + f12
+3. press ctrl + shift + i => browser click on 3 idot -> more tools -> developer tool
+
+
+Locators
+1. CSS Locators
+2. XPath
+3. Playwright inbuilt locators
+
+Basic Loactor:
+1.id
+2.class
+3.name
+4.text
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+
+<label for="username">Username</label>
+
+tag name-> input
+
+class,type,id,name,size -> attributeName
+
+"inputLogin","text","username","USERNAME" -> attributeValue
+
+black color text-Username -> text
+
+id-unique value
+name - name of the attribute
+class -
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+
+
+CSS : Cascading Style sheets
+id attribute
+1. #attributeValue -> #username
+2. [id='username']
+3. tagname[attributeName='attributeValue'] -> input[id='username']
+
+name attribute:
+1. [name='USERNAME']
+2. tagname[attributeName='attributeValue']
+
+class attribute:
+1. .attributeValue -> .decorativeSubmit
+2. [class='decorativeSubmit']
+3. tagname[attributeName='attributeValue']
+
+.input r4 wide mb16 mt8 username -> it wll not work
+.input.r4.wide.mb16.mt8.username -> it will work
+
+text value:
+text='textvalue' -> text='CRM/SFA'
+
+ClassRoom 1:
+Load the url : https://login.salesforce.com/?locale=in
+Enter the username : vidyar@testleaf.com
+Enter the password : Sales@123
+Click on login button 
+Get title of the page
+
+
+
+
+
+
+
+
+
+CSS Selectors
+Universal Selector ()*: Selects all elements within a page.
+
+Class Selector (.className): Selects all elements with a specific class.
+
+ID Selector (#idName): Selects a single element with a specific ID.
+
+DropDown:
+list of value 
+2 types of DropDown:
+1. with Select tag and Option tag -> SelectOption()
+2. without Select tag -> you can handle as normal click()
+
+Select Tag and Option Tag:
+Three methods to handle it.
+M1 -> using index value -> start from '0'
+M2 -> using label -> with help text value
+M3 -> using value -> value attribute will be present
+
+
+
+
+Playwright getBy Locators:
+Playwright provides a set of getBy methods to locate elements in the DOM, which can be more expressive and 
+powerful compared to traditional CSS selectors. These methods are used to interact with web elements 
+in a more human-readable way.
+
+Commonly Used getBy Locators
+getByText: Selects elements containing specific text.
+Example: page.getByText('Submit') selects an element with the text "Submit".
+
+ page.getByText('Leads').click()
+
+
+getByRole: Selects elements based on their ARIA roles.
+Example: page.getByRole('button', { name: 'Login' }) selects a button element with the accessible name "Login".
+
+page.getByRole('input',{name:'companyName'})
+
+getByLabel: Selects form elements associated with a specific label.
+Example: page.getByLabel('Username') selects the input field associated with the label "Username".
+
+getByPlaceholder: Selects input elements based on their placeholder attribute.
+Example: page.getByPlaceholder('Enter your password') selects an input field with the placeholder "Enter your password".
+
+getByAltText: Selects images and other elements with an alt attribute.
+Example: page.getByAltText('Product image') selects an image with the alt text "Product image".
+
+getByTestId: Selects elements with a specific data-testid attribute.
+Example: page.getByTestId('submit-button') selects an element with data-testid="submit-button".
