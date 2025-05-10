@@ -1,0 +1,137 @@
+Week4.day1
+-> Assertions/Autowait
+-> Typescript fundamentals 
+
+Assertion
+--------
+ element type -->web first assertion -->boolean return
+
+ comparing actual with expected result -->assertion
+
+ Assertion 
+  hard -stops the execution when assertion failed
+  soft -continue the execution and collects the error log 
+
+ expect -->playwright library -timeout 5s
+
+   non retrying    
+   retrying
+
+Assertion types
+Generic type-> toEqual ,toHaveTitle
+Locator type - > tobeEnabled
+Page Type -> url
+Screenshot assertion
+API assertion
+Negating assertions
+  expect().not.contain()
+
+Actionability check on action
+visible
+stable
+enable
+attached
+receive event
+
+
+TypeScript :
+
+ Js ->
+*Dynamic Typing
+*Light Weight
+*Run time exception
+*prototype
+
+TS-> superset of JS
+
+TS-> 
+*Static Typing -> type safety
+let val:string
+val="Dilip"
+val=23-> it will not accpect
+*Heavy weight
+*Compile time exception
+
+Install TypeScrpit
+*Globally
+ -> npm install -g typescript
+
+*Locally 
+-> npm install typescript __save-dev
+
+check Version
+-> tsc --version or tsc -v
+
+Save file in JS
+.js
+
+Save file in TS
+.ts
+
+to execute js:
+node filename.js
+
+to exceute ts:
+tsc filename.ts
+
+ts->transplied->js
+ts will be complied into js
+automatic it will convert into js code
+
+tsc filename -> filename.js
+
+Install TypeScrpit
+*Globally
+ -> npm install -g typescript
+
+*Locally 
+-> npm install typescript --save-dev
+
+check Version
+-> tsc --version or tsc -v
+
+
+execute:
+cmd-> tsc filename.ts -> convert js
+cmd-> node filename.js -> get output
+
+
+Datatype:
+String
+Number
+Boolean
+Null
+Undefined
+BigNit
+
+let value="js"
+value=56
+
+ts:
+let username="dilip" -> implicty infered as String
+username=2025
+
+
+
+ClassRoom:
+let data:String
+print the value
+
+union:
+let browserDetails:string|number|null
+browsername, browserVersion, browserType
+
+
+
+type alias -> Creating custom type of data
+let value:string
+
+syntax: type typeName=definition
+
+
+
+TypeScript Assertion:
+ Type casting-> informing the typescript complier to inference the data as string,number
+
+ let price;
+ price=500
