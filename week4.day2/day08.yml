@@ -1,0 +1,85 @@
+Agenda 
+-> enum
+-> function parameter
+-> Break
+-> Alert
+-> Breakout
+-> Frame
+
+
+ENUM: Enumeration
+-> named constant
+
+default type of enum will be numeric value
+start from '0'
+
+3types:
+1.numeric
+2.string
+3.hetrogenous
+
+Function Parameter:
+
+function cal(x:number,y:number):number{
+}
+
+TS there are 2 types parameter:
+1.default parameter -> variable will be assigned with value
+2.optional parameter (?) -> variable?
+
+
+Alert:
+Alert -> pop up,notification
+
+Alert -> Application
+
+*Modal alert -> cannot inspected 
+*Non Modal alert -> can be inspected -> use normal click()
+
+Behaviour of the Playwright:
+
+alert are auto dismissed (cancle)
+1. not mandatory to handle the alert explicity
+
+2.to explicity handle the alert
+use event listeners
+-> for whole script  -> page.on
+-> individual alert -> page.once
+
+1. accept()
+2. message()
+3. dismiss()
+4. type()
+
+
+ClassRoom:
+Url :https://www.leafground.com/alert.xhtml
+prompt alert -> enter yout name and click on accept 
+alertType.accept('type your name')
+
+Frame:
+
+Frame: Desgin another webelement/ webpage into another webpage
+DOM->html
+<html>
+<head>  </head>
+<body>
+
+<iframe>
+<html>
+<head> </head>
+<body>
+<input>
+<button>
+</body>
+</html>
+</iframe>
+
+</body>
+</html>
+
+iframe-> InLine Frame
+
+To handle the frame ->
+1.Frame object
+2.Frame Locator
