@@ -1,0 +1,70 @@
+Agenda:
+-------
+
+Read CSV file and Json
+Read ENV file
+Test annotations 
+Storage State -skip login
+---------------------------
+File --> type =file attribute in the dom
+
+setInputfiles -->
+locate ele-->uploadelement.setInputFiles(path of the file)
+
+SetFiles -->using event listener
+waitForEvent('FileChooser')
+ele is clicked
+resolving the promise -->filePrmise.setFiles(path of the file)
+----------------------------------------------------------------------------
+Reading data CSV/Json
+CSV -->comma separated value  == excel
+
+step:1 -->library in node as csv-parse
+   npm install csv-parse
+
+step:2 -->.csv   
+
+step:3 Read the data in test step
+
+fs -->install  filesystem
+ npm install fs
+
+
+ Crealead
+
+ Step:1  -->open terminal -->install csv and fs
+ npm install csv-parse
+ npm install fs
+
+ step:2 create .csv file
+ companyName,firstname,lastname
+ create 2 sets of data
+
+ step:3
+ in lead code 
+ parse the file to Read
+
+ step:4
+ test(=>{
+ login
+ crm clicked
+ leads
+ create lead clicked 
+ use forloop
+   data of createlead data{
+     page.locate(companame).fill(data.companyname)
+     page.locate(firstname).fill(data.firstname)
+     page.locate(lastname).fill(data.lastname)
+     page.locate(submit)
+   }
+ })
+
+
+read data from json
+
+step:1 ->.json 
+
+{
+"":"",
+"":""
+}
