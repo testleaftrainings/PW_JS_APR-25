@@ -1,0 +1,56 @@
+Today Agenda:
+- Frame
+- Breakout +Break
+- Window Handling
+- Breakout
+- File Upload 
+
+Frame :
+
+Frame : Desgin another webelement/ webpage into another webpage
+DOM->html
+<html>
+<head>  </head>
+<body>
+
+<iframe>
+<html>
+<head> </head>
+<body>
+<input>
+<button>
+</body>
+</html>
+</iframe>
+
+</body>
+</html>
+
+iframe-> InLine Frame
+
+To handle the frame ->
+1.Frame object
+2.Frame Locator
+
+
+
+Window Handling:
+
+- Sequential approach
+- Concurrent approach
+
+Create a promise -> waitforevent('page')
+->listener
+
+click on the button
+
+promise resolved
+
+
+ClassRoom:
+1.load url : https://leafground.com/window.xhtml
+//create promise
+2.click on Open button
+//resolved promise
+3.get title of the child 
+4.Enter the message
