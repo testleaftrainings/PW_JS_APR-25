@@ -1,0 +1,214 @@
+Agenda:
+------
+API Fundamentals
+Postman -->Service now and salesforce application
+   Semi automation tool-->validate request and response
+   environment -->collection
+   RestAPI 
+---------------
+API -->Application Programming Interface
+     -->communicates between client and server
+    Api based 
+      -->faster -->connecting server
+      -->exceptions -->not connected to ui
+      -->isolated -->browser engiene
+CRUD -->create,Read,update and Delete
+UI Testing -->high level -->end to end Testing
+
+Different API's 
+---------------
+SoapAPI -->secured application (banking industry)
+RestAPI -->web applications
+gRPC -->server to server communication (microservices comm) 
+GraphQL -->Query based 
+
+documentation  -swagger
+Methods & endpoints  
+headers 
+data  -->body/payload
+response -->status 
+---------------------
+Endpoint -->url -->identify the resource
+Methods -->Verbs/ CRUD
+create a resource  -Post
+fetch a resource   -Get
+update a resource  -Patch
+delete a resource  -delete
+replace a resource/creates the resource -put
+
+emp12 -->fetch address
+emp12 -->update
+emp12-->delete
+emp12 -->put  
+
+
+HTTPMEthod  Endpoint
+Headers 
+ Authorization 
+   No auth -->weather api
+   Basic Auth  username passowrd
+   Oauth  -->Open Authorization 
+   API key
+   JWT token   
+
+ Content-type  -->application/json,application/txt, application/xml
+
+parameters 
+   path parameters  -->find the resourse 
+   query parameters  -->filter in particular resource
+
+Body -->payload
+  lead -->firstname ,lastname company
+
+response -->staus code and status text
+staus code -->request 
+ 1xx --request information 
+ 2xx --success response -->created ok nocontent / 200,201
+ 3xx --redirect 
+ 4xx  - client error -404 ,403, 401 
+ 5xx  -server issues
+
+ 5step Process
+  1. documentation
+  2. Enpoints/methods/resources
+  3. Headers
+  4. Request Body 
+  5. Response code
+
+
+Step:1 Post Call --create a resource
+Endpoint  https://dev348063.service-now.com/api/now/table/incident
+Method Post
+Authorization --> Basic Auth
+                    username and password of serviceNow
+
+Body --> raw -->json
+ 
+ {
+    "location":""
+ }
+
+response 201 created             
+
+Step:2 Get Call --Fetch a resource
+Endpoint  https://dev348063.service-now.com/api/now/table/incident/sys_idValue
+Method Get
+Authorization --> Basic Auth
+                    username and password of serviceNow
+output
+response body
+response 200 ok     
+
+-----------------------------------------------
+Step:3 Patch Call --Update a resource
+Endpoint  https://dev348063.service-now.com/api/now/table/incident/sys_idValue
+Method Patch
+Authorization --> Basic Auth
+                    username and password of serviceNow
+  
+Body --> raw -->json
+ 
+ {
+    "location":""
+ }
+
+output
+response body 
+response code 200 ok
+
+-----------------------------------------
+Step:4 Delete Call --Delete a resource
+Endpoint  https://dev348063.service-now.com/api/now/table/incident/sys_idValue
+Method Get
+Authorization --> Basic Auth
+                    username and password of serviceNow
+output
+
+response 204 No Content 
+-----------------------------------------------
+
+Step:5 Get Call --Fetch a resource
+Endpoint  https://dev348063.service-now.com/api/now/table/incident/sys_idValue
+Method Get
+Authorization --> Basic Auth
+                    username and password of serviceNow
+output
+response body
+response code 404     no resource found
+
+
+Step:1 Generate Token 
+ POST https://login.salesforce.com/services/oauth2/token
+Add formdata-url encoded
+client_id
+client_secret
+username
+password
+granttype
+
+response 
+accesstoken,instance url, token type,identify
+response code 200 ok
+
+Step:2 Create a resource
+ POST https://insturl/services/data/v60.0/sobjects/Lead 
+Authorization -->bearer access_token
+body 
+{
+    "lastname":""
+    "company":
+}
+
+response 
+id,success
+response code  201 Created
+Resouces -->Lead, Contact, Account, Opportunity
+
+Step:3 Fetch  a resource
+GET https://insturl/services/data/v60.0/sobjects/Lead/id
+Authorization -->bearer access_token
+No body
+
+Response -->200 ok
+response body -->info on created resource
+
+Step:4 update a resource
+ PATCH https://insturl/services/data/v60.0/sobjects/Lead/id
+Authorization -->bearer access_token
+
+body 
+{
+    ""
+}
+
+response 
+No response body
+response code  204 NoContent
+
+--------------------------------------
+Step:5 Delete a resource
+ Delete https://insturl/services/data/v60.0/sobjects/Lead/id
+Authorization -->bearer access_token
+
+response 
+No response body
+response code  204 NoContent
+-------------------------------------
+
+postman script 
+var response =pm.response.json()
+var acc=response.access_token
+var leadId=response.id
+
+ pm.globals.set("keyacc",acc)
+  pm.globals.set("keyId",leadId)
+
+ PATCH https://insturl/services/data/v60.0/sobjects/Lead/{{keyId}}
+
+
+architecture
+stateless/stateful 
+Authorization/Authentication
+Response Code/ Response status text
+Request headers and Method
+Schema validation/ response validation
