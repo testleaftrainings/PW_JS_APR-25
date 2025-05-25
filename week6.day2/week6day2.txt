@@ -1,0 +1,1241 @@
+Playwright integration with API
+ parametrize
+ create utility
+
+global   -->global.set -->accessible for all collections
+collection -->collectionVariables.set -->accessible only within the collection
+environment  -->accessible only to the environment 
+
+
+browser=chromium.launch()  -->connect browser engiene
+context =brower.newContext() -->windows are launched
+page=context.newPage() -->tab is loaded on the window
+
+{page}
+
+APIRequestContext -->associated with browsercontext
+endpoints
+auth
+requestmethods
+body
+response status
+
+resquest.post(endpointurl,{headers:{},data:{}})
+{
+  result: {
+    parent: '',
+    made_sla: 'true',
+    caused_by: '',
+    watch_list: '',
+    upon_reject: 'cancel',
+    sys_updated_on: '2025-05-25 04:57:12',
+    child_incidents: '0',
+    hold_reason: '',
+    origin_table: '',
+    task_effective_number: 'INC0010183',
+    approval_history: '',
+    number: 'INC0010183',
+    resolved_by: '',
+    sys_updated_by: 'admin',
+    opened_by: {
+      link: 'https://dev348063.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441',
+      value: '6816f79cc0a8016401c5a33be04be441'
+    },
+    user_input: '',
+    sys_created_on: '2025-05-25 04:57:12',
+    sys_domain: {
+      link: 'https://dev348063.service-now.com/api/now/table/sys_user_group/global',
+      value: 'global'
+    },
+    state: '1',
+    route_reason: '',
+    sys_created_by: 'admin',
+    knowledge: 'false',
+    order: '',
+    calendar_stc: '',
+    closed_at: '',
+    cmdb_ci: '',
+    delivery_plan: '',
+    contract: '',
+    impact: '3',
+    active: 'true',
+    work_notes_list: '',
+    business_service: '',
+    business_impact: '',
+    priority: '5',
+    sys_domain_path: '/',
+    rfc: '',
+    time_worked: '',
+    expected_start: '',
+    opened_at: '2025-05-25 04:57:12',
+    business_duration: '',
+    group_list: '',
+    work_end: '',
+    caller_id: '',
+    reopened_time: '',
+    resolved_at: '',
+    approval_set: '',
+    subcategory: '',
+    work_notes: '',
+    universal_request: '',
+    short_description: '',
+    close_code: '',
+    correlation_display: '',
+    delivery_task: '',
+    work_start: '',
+    assignment_group: '',
+    additional_assignee_list: '',
+    business_stc: '',
+    cause: '',
+    description: 'Creating issue from Playwright',
+    origin_id: '',
+    calendar_duration: '',
+    close_notes: '',
+    notify: '1',
+    service_offering: '',
+    sys_class_name: 'incident',
+    closed_by: '',
+    follow_up: '',
+    parent_incident: '',
+    sys_id: 'cf6b32dc833162106e44a4d0deaad33e',
+    contact_type: '',
+    reopened_by: '',
+    incident_state: '1',
+    urgency: '3',
+    problem_id: '',
+    company: '',
+    reassignment_count: '0',
+    activity_due: '',
+    assigned_to: '',
+    severity: '3',
+    comments: '',
+    approval: 'not requested',
+    sla_due: '',
+    comments_and_work_notes: '',
+    due_date: '',
+    sys_mod_count: '0',
+    reopen_count: '0',
+    sys_tags: '',
+    escalation: '0',
+    upon_approval: 'proceed',
+    correlation_id: '',
+    location: '',
+    category: 'inquiry'
+  }
+}
+
+
+
+{
+    "id": "00QJ2000004BlnkMAC",
+    "success": true,
+    "errors": []
+}
+
+responseBody.id
+
+{
+   result:{
+         incidentnumber
+         description
+         location
+         }
+
+}
+
+responseBody.result.sys_id
+
+
+[
+  {},{}
+
+]
+
+
+
+{
+    "objectDescribe": {
+        "activateable": false,
+        "associateEntityType": null,
+        "associateParentEntity": null,
+        "createable": true,
+        "custom": false,
+        "customSetting": false,
+        "deepCloneable": false,
+        "deletable": true,
+        "deprecatedAndHidden": false,
+        "feedEnabled": true,
+        "hasSubtypes": false,
+        "isInterface": false,
+        "isSubtype": false,
+        "keyPrefix": "00Q",
+        "label": "Lead",
+        "labelPlural": "Leads",
+        "layoutable": true,
+        "mergeable": true,
+        "mruEnabled": true,
+        "name": "Lead",
+        "queryable": true,
+        "replicateable": true,
+        "retrieveable": true,
+        "searchable": true,
+        "triggerable": true,
+        "undeletable": true,
+        "updateable": true,
+        "urls": {
+            "compactLayouts": "/services/data/v60.0/sobjects/Lead/describe/compactLayouts",
+            "rowTemplate": "/services/data/v60.0/sobjects/Lead/{ID}",
+            "approvalLayouts": "/services/data/v60.0/sobjects/Lead/describe/approvalLayouts",
+            "listviews": "/services/data/v60.0/sobjects/Lead/listviews",
+            "describe": "/services/data/v60.0/sobjects/Lead/describe",
+            "quickActions": "/services/data/v60.0/sobjects/Lead/quickActions",
+            "layouts": "/services/data/v60.0/sobjects/Lead/describe/layouts",
+            "sobject": "/services/data/v60.0/sobjects/Lead"
+        }
+    },
+    "recentItems": [
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlnkMAC"
+            },
+            "Id": "00QJ2000004BlnkMAC",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlnLMAS"
+            },
+            "Id": "00QJ2000004BlnLMAS",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlnGMAS"
+            },
+            "Id": "00QJ2000004BlnGMAS",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bln6MAC"
+            },
+            "Id": "00QJ2000004Bln6MAC",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlSwMAK"
+            },
+            "Id": "00QJ2000004BlSwMAK",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlSrMAK"
+            },
+            "Id": "00QJ2000004BlSrMAK",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlSmMAK"
+            },
+            "Id": "00QJ2000004BlSmMAK",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlSXMA0"
+            },
+            "Id": "00QJ2000004BlSXMA0",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlS3MAK"
+            },
+            "Id": "00QJ2000004BlS3MAK",
+            "Name": "priya"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlRZMA0"
+            },
+            "Id": "00QJ2000004BlRZMA0",
+            "Name": "Kumar"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlRUMA0"
+            },
+            "Id": "00QJ2000004BlRUMA0",
+            "Name": "Kumar"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BlA5MAK"
+            },
+            "Id": "00QJ2000004BlA5MAK",
+            "Name": "Leaf, Training"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bl9WMAS"
+            },
+            "Id": "00QJ2000004Bl9WMAS",
+            "Name": "R, Srini"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bl8sMAC"
+            },
+            "Id": "00QJ2000004Bl8sMAC",
+            "Name": "kumar, Vinoth"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BVM0MAO"
+            },
+            "Id": "00QJ2000004BVM0MAO",
+            "Name": "selvi, Deepika"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BkqiMAC"
+            },
+            "Id": "00QJ2000004BkqiMAC",
+            "Name": "Test Lead"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BknFMAS"
+            },
+            "Id": "00QJ2000004BknFMAS",
+            "Name": "Test Lead"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BkmMMAS"
+            },
+            "Id": "00QJ2000004BkmMMAS",
+            "Name": "Test Lead"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BkmHMAS"
+            },
+            "Id": "00QJ2000004BkmHMAS",
+            "Name": "Test Lead"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BkmCMAS"
+            },
+            "Id": "00QJ2000004BkmCMAS",
+            "Name": "Test Lead"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bkm2MAC"
+            },
+            "Id": "00QJ2000004Bkm2MAC",
+            "Name": "Test Lead"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjkgMAC"
+            },
+            "Id": "00QJ2000004BjkgMAC",
+            "Name": "Kuhic"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjkbMAC"
+            },
+            "Id": "00QJ2000004BjkbMAC",
+            "Name": "Parker"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjkRMAS"
+            },
+            "Id": "00QJ2000004BjkRMAS",
+            "Name": "Prosacco"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjkMMAS"
+            },
+            "Id": "00QJ2000004BjkMMAS",
+            "Name": "Pagac"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjkHMAS"
+            },
+            "Id": "00QJ2000004BjkHMAS",
+            "Name": "Runolfsdottir"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjjYMAS"
+            },
+            "Id": "00QJ2000004BjjYMAS",
+            "Name": "Crooks-Ziemann"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjjTMAS"
+            },
+            "Id": "00QJ2000004BjjTMAS",
+            "Name": "Rippin"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjjEMAS"
+            },
+            "Id": "00QJ2000004BjjEMAS",
+            "Name": "Friesen"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bjj9MAC"
+            },
+            "Id": "00QJ2000004Bjj9MAC",
+            "Name": "Jakubowski"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjiQMAS"
+            },
+            "Id": "00QJ2000004BjiQMAS",
+            "Name": "Muller"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjiLMAS"
+            },
+            "Id": "00QJ2000004BjiLMAS",
+            "Name": "Wuckert"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjiGMAS"
+            },
+            "Id": "00QJ2000004BjiGMAS",
+            "Name": "Schmidt"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bji6MAC"
+            },
+            "Id": "00QJ2000004Bji6MAC",
+            "Name": "Schulist"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bji1MAC"
+            },
+            "Id": "00QJ2000004Bji1MAC",
+            "Name": "Daugherty"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjhwMAC"
+            },
+            "Id": "00QJ2000004BjhwMAC",
+            "Name": "Dickinson"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjhrMAC"
+            },
+            "Id": "00QJ2000004BjhrMAC",
+            "Name": "Flatley"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjhmMAC"
+            },
+            "Id": "00QJ2000004BjhmMAC",
+            "Name": "Herman"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjhXMAS"
+            },
+            "Id": "00QJ2000004BjhXMAS",
+            "Name": "Ortiz"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjIIMA0"
+            },
+            "Id": "00QJ2000004BjIIMA0",
+            "Name": "V, Madhan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BjI8MAK"
+            },
+            "Id": "00QJ2000004BjI8MAK",
+            "Name": "V, Madhan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BizBMAS"
+            },
+            "Id": "00QJ2000004BizBMAS",
+            "Name": "Parisian, Trisha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiiLMAS"
+            },
+            "Id": "00QJ2000004BiiLMAS",
+            "Name": "Ullrich, Vergie"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiiBMAS"
+            },
+            "Id": "00QJ2000004BiiBMAS",
+            "Name": "Jakubowski, Albina"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bii1MAC"
+            },
+            "Id": "00QJ2000004Bii1MAC",
+            "Name": "Quigley"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BihwMAC"
+            },
+            "Id": "00QJ2000004BihwMAC",
+            "Name": "Welch"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BihrMAC"
+            },
+            "Id": "00QJ2000004BihrMAC",
+            "Name": "Lynch"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bih2MAC"
+            },
+            "Id": "00QJ2000004Bih2MAC",
+            "Name": "AK, Test"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiDpMAK"
+            },
+            "Id": "00QJ2000004BiDpMAK",
+            "Name": "Charan, Hari"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiKDMA0"
+            },
+            "Id": "00QJ2000004BiKDMA0",
+            "Name": "TonySelvan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiJyMAK"
+            },
+            "Id": "00QJ2000004BiJyMAK",
+            "Name": "TonySelvan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiJtMAK"
+            },
+            "Id": "00QJ2000004BiJtMAK",
+            "Name": "TonySelvan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiJjMAK"
+            },
+            "Id": "00QJ2000004BiJjMAK",
+            "Name": "TonySelvan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiIqMAK"
+            },
+            "Id": "00QJ2000004BiIqMAK",
+            "Name": "Tony"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiEiMAK"
+            },
+            "Id": "00QJ2000004BiEiMAK",
+            "Name": "Iyyanar, Saranraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiEYMA0"
+            },
+            "Id": "00QJ2000004BiEYMA0",
+            "Name": "Balannagari, Mohanbabu"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiEOMA0"
+            },
+            "Id": "00QJ2000004BiEOMA0",
+            "Name": "Balannagari, Mohanbabu"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiDfMAK"
+            },
+            "Id": "00QJ2000004BiDfMAK",
+            "Name": "Test, Madhan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BiDPMA0"
+            },
+            "Id": "00QJ2000004BiDPMA0",
+            "Name": "Kumar, Nandha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bi4BMAS"
+            },
+            "Id": "00QJ2000004Bi4BMAS",
+            "Name": "MP"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bi3hMAC"
+            },
+            "Id": "00QJ2000004Bi3hMAC",
+            "Name": "b"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bi3cMAC"
+            },
+            "Id": "00QJ2000004Bi3cMAC",
+            "Name": "a"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bi3SMAS"
+            },
+            "Id": "00QJ2000004Bi3SMAS",
+            "Name": "V"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BhqjMAC"
+            },
+            "Id": "00QJ2000004BhqjMAC",
+            "Name": "V"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BhqeMAC"
+            },
+            "Id": "00QJ2000004BhqeMAC",
+            "Name": "f"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BhqZMAS"
+            },
+            "Id": "00QJ2000004BhqZMAS",
+            "Name": "V"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BhqPMAS"
+            },
+            "Id": "00QJ2000004BhqPMAS",
+            "Name": "MP"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BhCyMAK"
+            },
+            "Id": "00QJ2000004BhCyMAK",
+            "Name": "shaw, Doman"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BhCjMAK"
+            },
+            "Id": "00QJ2000004BhCjMAK",
+            "Name": "shaw, Doman"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bh9gMAC"
+            },
+            "Id": "00QJ2000004Bh9gMAC",
+            "Name": "Michael, Dom"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bh97MAC"
+            },
+            "Id": "00QJ2000004Bh97MAC",
+            "Name": "Michael, Dom"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bh8sMAC"
+            },
+            "Id": "00QJ2000004Bh8sMAC",
+            "Name": "Doe"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bh8JMAS"
+            },
+            "Id": "00QJ2000004Bh8JMAS",
+            "Name": "Toretto, Dominic"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bgd8MAC"
+            },
+            "Id": "00QJ2000004Bgd8MAC",
+            "Name": "Harini"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgcyMAC"
+            },
+            "Id": "00QJ2000004BgcyMAC",
+            "Name": "Harini"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgcFMAS"
+            },
+            "Id": "00QJ2000004BgcFMAS",
+            "Name": "Harini"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bgc5MAC"
+            },
+            "Id": "00QJ2000004Bgc5MAC",
+            "Name": "Harini"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgbvMAC"
+            },
+            "Id": "00QJ2000004BgbvMAC",
+            "Name": "Harini"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgZzMAK"
+            },
+            "Id": "00QJ2000004BgZzMAK",
+            "Name": "Amutha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgZpMAK"
+            },
+            "Id": "00QJ2000004BgZpMAK",
+            "Name": "Amutha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgZaMAK"
+            },
+            "Id": "00QJ2000004BgZaMAK",
+            "Name": "Amuthan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgZQMA0"
+            },
+            "Id": "00QJ2000004BgZQMA0",
+            "Name": "Amuthan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgZ6MAK"
+            },
+            "Id": "00QJ2000004BgZ6MAK",
+            "Name": "sara"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgYwMAK"
+            },
+            "Id": "00QJ2000004BgYwMAK",
+            "Name": "Amuthan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgYmMAK"
+            },
+            "Id": "00QJ2000004BgYmMAK",
+            "Name": "Amuthan"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BgYhMAK"
+            },
+            "Id": "00QJ2000004BgYhMAK",
+            "Name": "Harisha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BfvRMAS"
+            },
+            "Id": "00QJ2000004BfvRMAS",
+            "Name": "Test user"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BfvCMAS"
+            },
+            "Id": "00QJ2000004BfvCMAS",
+            "Name": "Test user"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BfpOMAS"
+            },
+            "Id": "00QJ2000004BfpOMAS",
+            "Name": "Singh, pragat"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BfblMAC"
+            },
+            "Id": "00QJ2000004BfblMAC",
+            "Name": "Singh, pragat"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BfLdMAK"
+            },
+            "Id": "00QJ2000004BfLdMAK",
+            "Name": "Harisha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BfAzMAK"
+            },
+            "Id": "00QJ2000004BfAzMAK",
+            "Name": "Harisha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf9IMAS"
+            },
+            "Id": "00QJ2000004Bf9IMAS",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf8yMAC"
+            },
+            "Id": "00QJ2000004Bf8yMAC",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf8jMAC"
+            },
+            "Id": "00QJ2000004Bf8jMAC",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf7qMAC"
+            },
+            "Id": "00QJ2000004Bf7qMAC",
+            "Name": "Harisha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf7lMAC"
+            },
+            "Id": "00QJ2000004Bf7lMAC",
+            "Name": "Harisha"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf7HMAS"
+            },
+            "Id": "00QJ2000004Bf7HMAS",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf7CMAS"
+            },
+            "Id": "00QJ2000004Bf7CMAS",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bf3yMAC"
+            },
+            "Id": "00QJ2000004Bf3yMAC",
+            "Name": "laksh"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BeiQMAS"
+            },
+            "Id": "00QJ2000004BeiQMAS",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BeiGMAS"
+            },
+            "Id": "00QJ2000004BeiGMAS",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BeiBMAS"
+            },
+            "Id": "00QJ2000004BeiBMAS",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BehwMAC"
+            },
+            "Id": "00QJ2000004BehwMAC",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BehmMAC"
+            },
+            "Id": "00QJ2000004BehmMAC",
+            "Name": "Amudhavalli Mohanraj"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BegZMAS"
+            },
+            "Id": "00QJ2000004BegZMAS",
+            "Name": "A M"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BdPSMA0"
+            },
+            "Id": "00QJ2000004BdPSMA0",
+            "Name": "S, Rathi"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bd2GMAS"
+            },
+            "Id": "00QJ2000004Bd2GMAS",
+            "Name": "Sophia"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcMGMA0"
+            },
+            "Id": "00QJ2000004BcMGMA0",
+            "Name": "abc"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bd0FMAS"
+            },
+            "Id": "00QJ2000004Bd0FMAS",
+            "Name": "D'Amore"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcpbMAC"
+            },
+            "Id": "00QJ2000004BcpbMAC",
+            "Name": "Hanasoge, Abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcpRMAS"
+            },
+            "Id": "00QJ2000004BcpRMAS",
+            "Name": "Hanasoge, Abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcpCMAS"
+            },
+            "Id": "00QJ2000004BcpCMAS",
+            "Name": "Hanasoge, Abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bcp7MAC"
+            },
+            "Id": "00QJ2000004Bcp7MAC",
+            "Name": "Hanasoge, Abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcnuMAC"
+            },
+            "Id": "00QJ2000004BcnuMAC",
+            "Name": "Hanasoge, Abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcnVMAS"
+            },
+            "Id": "00QJ2000004BcnVMAS",
+            "Name": "hanasoge, abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcnLMAS"
+            },
+            "Id": "00QJ2000004BcnLMAS",
+            "Name": "hanasoge, abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcF5MAK"
+            },
+            "Id": "00QJ2000004BcF5MAK",
+            "Name": "hanasoge, abhishek"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcOWMA0"
+            },
+            "Id": "00QJ2000004BcOWMA0",
+            "Name": "Masilamani"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcOCMA0"
+            },
+            "Id": "00QJ2000004BcOCMA0",
+            "Name": "Masilamani"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcO7MAK"
+            },
+            "Id": "00QJ2000004BcO7MAK",
+            "Name": "Masilamani"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcNxMAK"
+            },
+            "Id": "00QJ2000004BcNxMAK",
+            "Name": "Masilamani"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcNiMAK"
+            },
+            "Id": "00QJ2000004BcNiMAK",
+            "Name": "Masilamani"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcNEMA0"
+            },
+            "Id": "00QJ2000004BcNEMA0",
+            "Name": "Masilamani"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004BcECMA0"
+            },
+            "Id": "00QJ2000004BcECMA0",
+            "Name": "a, a"
+        },
+        {
+            "attributes": {
+                "type": "Lead",
+                "url": "/services/data/v60.0/sobjects/Lead/00QJ2000004Bc8iMAC"
+            },
+            "Id": "00QJ2000004Bc8iMAC",
+            "Name": "Kavitha"
+        }
+    ]
+}
+
+
+To generate random data
+npm install @faker-js/faker
+
+
+Grouping the testcase
+for sequential execution
+test.describe(``,async()=>{
+test(`test1`,async({page})=>{
+
+})
+
+test(`test2`,async({page})=>{
+    
+})
+
+})
+
+
+serial --> test will run based on the previous test status
+test.describe.serial(``,async()=>{
+test(`test1`,async({page})=>{
+
+}) //passed
+
+test(`test2`,async({page})=>{
+    
+})//failed
+
+test(`test3`,async({page})=>{
+    //ignored from execution (it will not run)
+})
+
+})
