@@ -1,0 +1,97 @@
+Agenda:
+-------
+Read .env data
+Test annotations --control the test behaviour
+StorageState --skip login 
+Codegen -- code generator 
+geolocation - mock the geolocation
+deviceEmulation - emulate the device 
+-----------------
+
+Tomorrow -->oops -->Class/obj/constructor/accessmodifier/inheritance 
+
+------------------------------------------
+
+env variable-->used to for specific env and make the info secrets
+       apikeys
+       token
+create file .env -->environment variables
+
+install dotenv library
+npm install dotenv
+
+process -->NodeJsProcess
+process.env-->system information
+fetch the info from qa.env file -->set the file path
+
+
+create a .env file
+
+baseUrl=http://login.salesforce.com
+SF_username=vidyar@testleaf.com
+SF_password=Sales@123
+
+npm install dotenv
+create a sf_loginWithenv.spec.ts
+read  the env data in respective fields
+
+To fetch data from different env files
+
+
+1.CLI
+set the file -->$env:envFile='prod'
+
+
+2.package.json file
+script:{
+       $env:envFile='prod'; npx playwright test readEnvMulData.spec.ts
+}
+
+2.different config.ts file
+script:{
+       "env:prod":"npx playwright test filename.spec.ts --config=playwright.prod.config.ts"
+}
+
+to execute
+npm run env:prod
+
+Test annotations
+----------------
+  -->control the behaviour of the execution
+  test.only -->focus on the specific test
+  test.skip -->igonre the test from execution
+  test.fixme -->track the know failures yet to fix
+  test.fail --> for negative testing -->test is failing as expected
+  test.slow -->double the timeout of the test -->30s -default -->60 s for the entire test
+  test.describe -->grouping the test -->dependency on the status of other test 
+   categorize -->tags, grep testmatch
+  test.beforeAll -->before all the test it will be executed 
+  test.beforeEach -->before each test it will run -->login logic  beforeeach  test()
+  test.afterEach -->post condition -->to create issue in jira
+  test.afterAll -->post condiiton -->teardown/ attaching screenshot to the jira /azure
+  test.info /testInfo:TestInfo --.fetch the status of the current test
+  test.step -->clear reporting on test step
+  test.use -->use the functionality
+
+
+50% of the cpu core will be used for the execution in your local system
+
+npx playwright test  -->all the test will be executed under ./tests
+npx playwright test readEnv -->executes the file.spec.ts matching with the file name 
+npx playwright test -g  listener -->executes the spec fil with matching test title
+npx playwright test  --config= config.ts
+npx playwright test  --project=projectname
+npx playwright test  --browser=chrome
+npx playwright test  --headed
+
+ -->flag -->global regular expression
+-g
+--grep 
+{tag:'@smoke'}
+npx playwright test -g '@smoke'
+npx playwright test -g  '@smoke @regression'  -->both condition to be true
+npx playwright test -g  '@smoke | @regression' -->either of the one should be matching
+
+testMatch -->to execute the matching spec file
+
+npx playwright test ./day10/ 
