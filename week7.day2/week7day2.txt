@@ -1,0 +1,59 @@
+Agenda
+-------
+Hooks -beforeAll,beforeEach,afterEach and AfterAll
+StorageState --skip login 
+persistentContext --simulate the user behaviour in normal browser
+Codegen -- code generator 
+geolocation - mock the geolocation
+deviceEmulation - emulate the device 
+visual regression testing -image comparision
+Network interception - mocking request/response
+--------------------------------------------
+
+oops -->class,method, accessmodifier, constructor,oops
+pom -->jira, custom fixture,githubaction,framework
+
+
+test annoations /pre and post condition
+
+beforeAll -->runs before all the test (once ->data reading)
+beforeEach -->before each test function  -->login  
+aftereach -->get status of the test -failed ,passed -->reporter, defect in jira
+afterall -->upload the attachments / close db connection --runs once 
+
+beforeAll
+   beforeEach
+       test 1
+   afterEach
+
+   beforeEach
+        test 2
+   afterEach
+afterAll
+---------
+
+Storage State:  -->capture the session information --local storage, cookies storage
+------------
+
+persistent context -->to simulate the normal browser
+
+code generator 
+-------------
+ record and playback
+npx playwright codegen path file application to launch
+
+Network interception
+---------------------
+abort
+mock request and response
+
+
+
+
+
+
+
+
+
+
+
