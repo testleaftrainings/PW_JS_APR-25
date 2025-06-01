@@ -1,0 +1,26 @@
+{
+  "name": "pw_apr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:prod":"npx playwright test readEnvMulData.spec.ts --config=playwright.prod.config.ts",
+    "env:uat":"$env:envFile=uat; npx playwright test readEnvMulData.spec.ts",
+    "test:uat":"npx playwright test readEnvMulData.spec.ts --config=playwright.uat.config.ts",
+    "test:all":"npm run test:prod && npm run test:uat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.5.0",
+    "fs": "^0.0.1-security"
+  }
+}
