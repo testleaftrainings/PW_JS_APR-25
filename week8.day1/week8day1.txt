@@ -1,0 +1,105 @@
+Agenda:
+-------
+Class and object
+Method
+Constructor
+Class room
+Break
+Accessmodifier
+Encapsulation
+Inheritance
+Classroom
+Polymorphism
+-------------------
+Benefit of OOPs
+---------------
+Flexibility
+Resuability
+No redundancy
+Easy Maintainence 
+Scalability
+
+design pattern 
+Page Object Model
+-----------
+Object oriented Programming
+
+object -->real thing /real world entity
+
+class -->group of features shared by an object
+  -->design /template to build a object
+
+  property  -->information in the page  -->button, class, id ,textbox
+  method -->action performed -->click, input-type, navidation, 
+
+class className{
+    //property
+    //method
+}
+
+let varibaleName=new classname()
+
+cannnot use  let/ const inside the class --.becoz of block scoped 
+
+hirerarchy  of methods
+constructor()
+normal methods/property
+
+
+fixture -->predefined set of code
+page -->
+test.extend{
+    page: async()=>{
+    
+   const browser=await chromium.launch()
+    const context=await browser.newContext()
+    const page=await context.newPage()
+}
+}
+
+
+AccessModifier -->set up scope of class member -->property and methods
+
+public -->can be acccessed inside and outside class
+protected  -->can be accessed inside the class as well to the related class -->relationship -->inherit
+private -->not accessible outside the class -->give permission to access or to rewrite using get and set method
+readonly -->constant/final -cannot be changed
+static -->one single refernce(Class refernce) shared across other files
+
+
+Encapsulation -->data binding -->bind the property and method in the class
+
+Inheritance -->inherit the property of parent to child
+extends -->to acquire the property of parent to child--builds relationship between classes
+ is-a relationship
+inheritance happens between two similar classes 
+class a,b,c
+class b extends class a
+  -->protected varibale will be accessed
+
+
+  static -->support to share the instance/refernce accross the class using ClassName itself
+
+types of inheritance
+single inheritance
+Multilevel -->class c extends class b
+               class b extends class a
+Hirerarchial -->class c extends class a
+                class b extends class a
+
+Multiple inheritance is not possible at class level->acheived with interface level       
+
+Creating the lead 
+6 pages 
+
+login-->welcomePage-->homePage-->Lead -->createlead -->viewLead
+                                      -->findLead -->viewLead-->edit
+                                      -->MergeLead
+                                 Account -->createAccount
+                                 contact -->createContact
+PageObjectmodel-->splits the elements and its actions from the test logic
+
+login-->username,password,login
+welcomepage-->crmsfa,logout
+homepage-->leads,accounts,contact,acctivities,opp....
+leads-->findlead,createlead,....
