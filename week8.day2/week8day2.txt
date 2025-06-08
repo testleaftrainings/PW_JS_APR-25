@@ -1,0 +1,50 @@
+Agenda:
+------
+Building PageObjectModel 
+Polymorphism
+Abstraction
+POM with Custom Fixture 
+POM with Jira Integration
+Refactoring POM to build Framework
+
+
+                                 contact -->createContact
+PageObjectmodel-->splits the elements and its actions from the test logic
+
+login-->username,password,login
+welcomepage-->crmsfa,logout
+homepage-->leads,accounts,contact,acctivities,opp....
+leads-->findlead,createlead,....
+
+Each class represents the webpage in the application
+class has methods -->represent the elements  and action in the webpage
+loginPage-->username ele,password element type and login ele click
+welcomePage-->crmEle,logoutele
+homePage -->leads,accounts,contact,acctivities,opp....
+
+abstraction-->hide the unwanted info to the user 
+
+interface -->Page,BrowserContext -->comletely hiding the implementation
+      -->design only -->no implementation 
+      -->100%
+      -->unimplemented methods
+       clickLogin();
+
+abstract class -->0 to 100%
+ design -->unimplemented methods
+ clickLogin();
+ logic -->implemented methods
+ clickLogin(){
+    //logic
+ }
+
+OOps keywords
+class extends another class
+abstract class extends another abstract class
+interface extends another interface
+
+class extends abstract class
+class implements interface
+
+class extends abstract class implements interface
+interface /abstract class -->cannot create object
